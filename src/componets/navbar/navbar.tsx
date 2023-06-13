@@ -11,7 +11,7 @@ const navbar = () => {
           Plan a trip
         </Link>
         <Link to="/discover" className="mx-5">
-          Discover
+          Discover.
         </Link>
         <Link to="/checkflights" className="mx-5">
           Check flights

@@ -1,10 +1,13 @@
-import React from "react";
+import { Navbar } from "../../components";
 
 const discover = () => {
   return (
-    <div className="text-3xl w-screen h-screen flex items-center justify-center bg-green-600">
-      Discover page
-    </div>
+    <>
+      <Navbar />
+      <div className="text-3xl w-screen h-screen flex items-center justify-center bg-green-600">
+        Discover page
+      </div>
+    </>
   );
 };
 

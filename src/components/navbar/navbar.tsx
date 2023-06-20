@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const navbar = () => {
   return (
     <div className="navbar flex flex-row justify-between items-center bg-black w-screen h-24 px-24">
       <div className="container_pages">
+        {/* logo & home link */}
         <Link
           to="/"
           className="
@@ -18,58 +19,44 @@ const navbar = () => {
         >
           Stellar
         </Link>
-        <Link
+
+        {/* pages links */}
+        <NavLink
           to="/planatrip"
-          className=" 
-          text-white
-            cursor-pointer
-            text-xs
-            leading-7 
-            font-robo 
-            font-bold
-            hover:text-red-700 
-            transition-colors
-            duration-200
-            delay-75
-            mr-10"
+          className={({ isActive }) => {
+            return (
+              "text-white cursor-pointer text-xs leading-7 font-robo font-bold hover:text-red-700 transition-colors duration-200 delay-75 mr-10" +
+              (!isActive ? "" : " text-red-700")
+            );
+          }}
         >
           Plan a trip
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to="/discover"
-          className="
-          text-white
-            cursor-pointer
-            text-xs
-            leading-7 
-            font-robo 
-            font-bold
-            hover:text-red-700 
-            transition-colors
-            duration-200
-            delay-75
-            mr-10"
+          className={({ isActive }) => {
+            return (
+              "text-white cursor-pointer text-xs leading-7 font-robo font-bold hover:text-red-700 transition-colors duration-200 delay-75 mr-10" +
+              (!isActive ? "" : " text-red-700")
+            );
+          }}
         >
           Discover
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to="/checkflights"
-          className="
-          text-white
-            cursor-pointer
-            text-xs
-            leading-7 
-            font-robo 
-            font-bold
-            hover:text-red-700 
-            transition-colors
-            duration-200
-            delay-75
-            mr-10"
+          className={({ isActive }) => {
+            return (
+              "text-white cursor-pointer text-xs leading-7 font-robo font-bold hover:text-red-700 transition-colors duration-200 delay-75 mr-10" +
+              (!isActive ? "" : " text-red-700")
+            );
+          }}
         >
           Check flights
-        </Link>
+        </NavLink>
       </div>
+
+      {/* login and register links */}
       <div className="container_access">
         <ul className="flex flex-row">
           <li

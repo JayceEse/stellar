@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 
-const navbar = () => {
+const Navbar = () => {
   return (
     <div className="navbar flex flex-row justify-between items-center bg-black w-screen h-24 px-24">
       <div className="container_pages">
@@ -95,4 +95,4 @@ const navbar = () => {
   );
 };
 
-export default navbar;
+export default Navbar;

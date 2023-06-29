@@ -1,9 +1,6 @@
-import { Navbar } from "../../components";
-
-const check = () => {
+const Check = () => {
   return (
     <>
-      <Navbar />
       <div className="text-3xl w-screen h-screen flex items-center justify-center bg-violet-600">
         Check flights page
       </div>
@@ -11,4 +8,4 @@ const check = () => {
   );
 };
 
-export default check;
+export default Check;

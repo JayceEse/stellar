@@ -1,6 +1,32 @@
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  const Links = [
+    {
+      to: "/planatrip",
+      label: "Plan a trip",
+    },
+    {
+      to: "/discover",
+      label: "Discover",
+    },
+    {
+      to: "/checkflights",
+      label: "Check flights",
+    },
+  ];
+
+  const LinksTwo = [
+    {
+      to: "/login",
+      label: "Login",
+    },
+    {
+      to: "/register",
+      label: "Register",
+    },
+  ];
+
   return (
     <div className="navbar flex flex-row justify-between items-center bg-black w-screen h-24 px-24">
       <div className="container_pages">
@@ -21,47 +47,27 @@ const Navbar = () => {
         </Link>
 
         {/* pages links */}
-        <NavLink
-          to="/planatrip"
-          className={({ isActive }) => {
-            return (
-              "text-white cursor-pointer text-xs leading-7 font-robo font-bold hover:text-red-700 transition-colors duration-200 delay-75 mr-10" +
-              (!isActive ? "" : " text-red-700")
-            );
-          }}
-        >
-          Plan a trip
-        </NavLink>
-        <NavLink
-          to="/discover"
-          className={({ isActive }) => {
-            return (
-              "text-white cursor-pointer text-xs leading-7 font-robo font-bold hover:text-red-700 transition-colors duration-200 delay-75 mr-10" +
-              (!isActive ? "" : " text-red-700")
-            );
-          }}
-        >
-          Discover
-        </NavLink>
-        <NavLink
-          to="/checkflights"
-          className={({ isActive }) => {
-            return (
-              "text-white cursor-pointer text-xs leading-7 font-robo font-bold hover:text-red-700 transition-colors duration-200 delay-75 mr-10" +
-              (!isActive ? "" : " text-red-700")
-            );
-          }}
-        >
-          Check flights
-        </NavLink>
+        {Links.map((link, index) => (
+          <NavLink
+            key={index}
+            to={link.to}
+            className={({ isActive }) =>
+              `text-white cursor-pointer text-xs leading-7 font-robo font-bold hover:text-red-700 transition-colors duration-200 delay-75 mr-10 ${
+                isActive ? "text-red-700" : ""
+              }`
+            }
+          >
+            {link.label}
+          </NavLink>
+        ))}
       </div>
-
-      {/* login and register links */}
       <div className="container_access">
-        <ul className="flex flex-row">
-          <li
-            className="
-          text-white
+        {/* login and register links */}
+        {LinksTwo.map((link, index) => (
+          <NavLink
+            key={index}
+            to={link.to}
+            className="text-white
             cursor-pointer
             text-xs
             leading-7 
@@ -73,23 +79,9 @@ const Navbar = () => {
             delay-75
             mr-9"
           >
-            Login
-          </li>
-          <li
-            className="text-white
-            cursor-pointer
-            text-xs
-            leading-7 
-            font-robo 
-            font-bold
-            hover:text-red-700 
-            transition-colors
-            duration-200
-            delay-75"
-          >
-            Register
-          </li>
-        </ul>
+            {link.label}
+          </NavLink>
+        ))}
       </div>
     </div>
   );

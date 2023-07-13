@@ -1,9 +1,17 @@
+import background from "../../assets/homePage-bg.png";
+
 const Home = () => {
+  const bgClass = {
+    backgroundImage: `url(${background})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    width: "100vw",
+    height: "100vh",
+  };
+
   return (
     <>
-      <div className="text-3xl w-screen h-screen flex items-center justify-center bg-yellow-300">
-        Home Section
-      </div>
+      <div style={bgClass}></div>
     </>
   );
 };

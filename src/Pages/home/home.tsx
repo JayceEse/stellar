@@ -1,4 +1,4 @@
-import background from "../../assets/homePage-bg.png";
+import background from "../../assets/CoralIsland.png";
 
 const Home = () => {
   const bgClass = {
@@ -11,7 +11,20 @@ const Home = () => {
 
   return (
     <>
-      <div style={bgClass}></div>
+      <section style={bgClass}>
+        <div className="flex flex-row justify-center text-white text-xs font-normal">
+          <p>
+            Wafer dessert danish. Powder toffee cookie jelly beans bear claw
+            jelly gingerbread halvah and
+          </p>
+        </div>
+        <div>
+          <h1>Go places you've dreamed of.</h1>
+        </div>
+        <div>
+          <p>Watch the video</p>
+        </div>
+      </section>
     </>
   );
 };

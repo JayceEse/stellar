@@ -1,6 +1,9 @@
 import React from "react";
 import { CoralIsland, CrystalCaves, HomeImg } from "../../assets";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
+// Background images slide
 const data = [
   { img: HomeImg, alt: "Home Image" },
   { img: CoralIsland, alt: "Coral Island Image" },
@@ -25,10 +28,25 @@ const imgSlide: ImgSlideStyle = {
   height: "100vh",
 };
 
+// Button styles
+const buttonStyle: string =
+  "flex justify-center items-center rounded-full text-base w-11 h-11 bg-white cursor-pointer";
+
 const KitchenSink = () => {
   return (
     <>
-      <div style={imgSlide}>image</div>
+      <div style={imgSlide}>
+        <div className="flex flex-row justify-between w-28">
+          {/* Left Button */}
+          <div className={buttonStyle}>
+            <FontAwesomeIcon icon={faArrowLeft} />
+          </div>
+          {/* Right Button */}
+          <div className={buttonStyle}>
+            <FontAwesomeIcon icon={faArrowRight} />
+          </div>
+        </div>
+      </div>
     </>
   );
 };

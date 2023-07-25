@@ -67,34 +67,34 @@ const KitchenSink = () => {
     "flex justify-center items-center rounded-full text-2xl w-14 h-14 bg-white cursor-pointer";
 
   const playButtonStyle: string =
-    "font-openSan text-base text-white font-bold flex justify-between items-center w-auto h-11 cursor-pointer mr-16";
+    "font-openSan text-base text-white font-bold flex flex-row items-center w-auto h-11 cursor-pointer sm:mr-16 mr-0";
 
   const playIconStyle: string = "text-base p-4 mr-6 rounded-full bg-red-700";
 
   const moreInfoStyle: string =
-    "font-openSan font-bold text-white text-sm border-2 border-white border-solid w-48 h-11";
+    "font-openSan font-bold text-white text-sm border-2 border-white border-solid w-48 h-11 sm:mt-0 mt-6";
 
   // Title & description styles
   const titleBaseClasses: string =
-    "text-8xl font-noto text-white font-bold w-[600px] h-auto mb-20";
+    "lg:text-8xl text-6xl font-noto text-white font-bold max-w-[600px] h-auto mb-20";
 
   const titleHomeClasses: string =
-    "text-[150px] font-noto text-white font-bold w-[1300px] h-auto mb-8";
+    "lg:text-[150px] md:text-9xl sm:text-8xl text-6xl font-noto text-white font-bold max-w-7xl h-auto mb-8";
 
   const paraHomeClasses: string =
-    "font-openSan text-2xl font-semibold text-white w-[810px] h-auto mb-11 mt-40";
+    "font-openSan md:text-2xl text-lg font-semibold text-white max-w-4xl h-auto mb-11 mt-40";
 
   const paraBaseClasses: string =
-    "font-openSan text-2xl font-semibold text-white w-40 h-14 mr-56";
+    "font-openSan text-2xl font-semibold text-white w-40 h-14 lg:mr-56 mr-20";
 
   const wrapperHomeClass: string = "flex flex-row justify-between w-auto";
 
-  const wrapperBaseClass: string = "flex flex-row w-auto";
+  const wrapperBaseClass: string = "flex sm:flex-row flex-col w-auto";
 
   const containerHomeClass: string =
-    "flex flex-col-reverse justify-between ml-36 mt-28 w-auto h-auto";
+    "flex flex-col-reverse justify-between lg:ml-36 mx-12 mt-28 w-auto h-auto";
 
-  const containerBaseClass: string = "ml-36 mt-40";
+  const containerBaseClass: string = "lg:ml-36 mx-12 mt-40";
 
   return (
     <>
@@ -127,8 +127,8 @@ const KitchenSink = () => {
           </div>
         </div>
 
-        <div className="flex flex-row justify-between mx-36 mb-16">
-          <div className="flex flex-row justify-between w-36">
+        <div className="flex md:flex-row flex-col-reverse md:justify-between items-center lg:mx-36 mx-12 mb-16">
+          <div className="flex flex-row justify-between w-36 md:mt-0 mt-6">
             {/* Left Button */}
             <button className={buttonStyle} onClick={prevSlide}>
               <FontAwesomeIcon icon={faArrowLeft} />
@@ -139,7 +139,7 @@ const KitchenSink = () => {
             </button>
           </div>
 
-          <div className="flex flex-row justify-between items-center">
+          <div className="flex sm:flex-row flex-col items-center">
             {/* Watch video button */}
             <button className={playButtonStyle}>
               <FontAwesomeIcon icon={faPlay} className={playIconStyle} />

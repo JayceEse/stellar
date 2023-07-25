@@ -76,7 +76,7 @@ const KitchenSink = () => {
 
   // Title & description styles
   const titleBaseClasses: string =
-    "lg:text-8xl text-6xl font-noto text-white font-bold max-w-[600px] h-auto mb-20";
+    "lg:text-8xl text-6xl font-noto text-white font-bold max-w-xl h-auto mb-20";
 
   const titleHomeClasses: string =
     "lg:text-[150px] md:text-9xl sm:text-8xl text-6xl font-noto text-white font-bold max-w-7xl h-auto mb-8";

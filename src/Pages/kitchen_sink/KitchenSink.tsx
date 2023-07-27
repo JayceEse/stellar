@@ -62,6 +62,50 @@ const KitchenSink = () => {
     height: "100vh",
   };
 
+  // Desination content styling
+  const classStyles = [
+    {
+      titleHome:
+        "lg:text-[150px] md:text-9xl sm:text-8xl text-6xl font-noto text-white font-bold max-w-7xl h-auto mb-8",
+      titleBase:
+        "lg:text-8xl text-6xl font-noto text-white font-bold max-w-xl h-auto mb-20",
+    },
+    {
+      paraHome:
+        "font-openSan md:text-2xl text-lg font-semibold text-white max-w-4xl h-auto mb-11 mt-40",
+      paraBase:
+        "font-openSan text-2xl font-semibold text-white w-40 h-14 lg:mr-56 mr-20",
+    },
+    {
+      wrapperHome: "flex-row justify-between w-auto",
+      wrapperBase: "flex sm:flex-row flex-col w-auto",
+    },
+    {
+      containerHome:
+        "flex flex-col-reverse justify-between lg:ml-36 mx-12 mt-28 w-auto h-auto",
+      containerBase: "lg:ml-36 mx-12 mt-40",
+    },
+  ];
+
+  // Checking slide index and applying style
+  const isHomeSlide = currentIndex === 0;
+
+  const titleStyle = isHomeSlide
+    ? classStyles[0].titleHome
+    : classStyles[0].titleBase;
+
+  const paraStyle = isHomeSlide
+    ? classStyles[1].paraHome
+    : classStyles[1].paraBase;
+
+  const wrapperStyle = isHomeSlide
+    ? classStyles[2].wrapperHome
+    : classStyles[2].wrapperBase;
+
+  const containerStyle = isHomeSlide
+    ? classStyles[3].containerHome
+    : classStyles[3].containerBase;
+
   // Button styles
   const buttonStyle: string =
     "flex justify-center items-center rounded-full text-2xl w-14 h-14 bg-white cursor-pointer";
@@ -74,28 +118,6 @@ const KitchenSink = () => {
   const moreInfoStyle: string =
     "font-openSan font-bold text-white text-sm border-2 border-white border-solid w-48 h-11 sm:mt-0 mt-6";
 
-  // Title & description styles
-  const titleBaseClasses: string =
-    "lg:text-8xl text-6xl font-noto text-white font-bold max-w-xl h-auto mb-20";
-
-  const titleHomeClasses: string =
-    "lg:text-[150px] md:text-9xl sm:text-8xl text-6xl font-noto text-white font-bold max-w-7xl h-auto mb-8";
-
-  const paraHomeClasses: string =
-    "font-openSan md:text-2xl text-lg font-semibold text-white max-w-4xl h-auto mb-11 mt-40";
-
-  const paraBaseClasses: string =
-    "font-openSan text-2xl font-semibold text-white w-40 h-14 lg:mr-56 mr-20";
-
-  const wrapperHomeClass: string = "flex flex-row justify-between w-auto";
-
-  const wrapperBaseClass: string = "flex sm:flex-row flex-col w-auto";
-
-  const containerHomeClass: string =
-    "flex flex-col-reverse justify-between lg:ml-36 mx-12 mt-28 w-auto h-auto";
-
-  const containerBaseClass: string = "lg:ml-36 mx-12 mt-40";
-
   return (
     <>
       <div
@@ -103,24 +125,12 @@ const KitchenSink = () => {
         className="flex flex-col justify-between duration-500 delay-75"
       >
         {/* Destination Info */}
-        <div
-          className={
-            currentIndex === 0 ? containerHomeClass : containerBaseClass
-          }
-        >
-          <div
-            className={currentIndex === 0 ? titleHomeClasses : titleBaseClasses}
-          >
+        <div className={containerStyle}>
+          <div className={titleStyle}>
             <h1>{data[currentIndex].label}</h1>
           </div>
-          <div
-            className={currentIndex === 0 ? wrapperHomeClass : wrapperBaseClass}
-          >
-            <p
-              className={currentIndex === 0 ? paraHomeClasses : paraBaseClasses}
-            >
-              {data[currentIndex].description}
-            </p>
+          <div className={wrapperStyle}>
+            <p className={paraStyle}>{data[currentIndex].description}</p>
             <p className="font-openSan text-sm font-normal text-white mt-10">
               {data[currentIndex].temp}
             </p>

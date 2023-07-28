@@ -7,7 +7,7 @@ import {
   faPlay,
 } from "@fortawesome/free-solid-svg-icons";
 
-const Home = () => {
+const KitchenSink = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {
@@ -165,4 +165,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default KitchenSink;

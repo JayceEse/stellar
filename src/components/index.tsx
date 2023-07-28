@@ -1,2 +1,2 @@
 // Exporting componets to Pages
-export { default as Navbar } from "./Navbar/Navbar";
+export { default as Navbar } from "./Navbar/navbar";

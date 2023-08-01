@@ -8,7 +8,7 @@ const Plan = lazy(() => import("./Pages/Plan/plan"));
 const Discover = lazy(() => import("./Pages/Discover/discover"));
 const Check = lazy(() => import("./Pages/Check/check"));
 const NoPage = lazy(() => import("./Pages/nopage/noPage"));
-const Kitchen = lazy(() => import("./Pages/Kitchen_sink/KitchenSink"));
+const Kitchen = lazy(() => import("./Pages/kitchen_sink/KitchenSink"));
 
 function App() {
   return (

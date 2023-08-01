@@ -1,7 +1,13 @@
-import React from "react";
+import BookNow from "../Buttons/BookNow";
 
 const Footer = () => {
-  return <div>Footer</div>;
+  return (
+    <>
+      <div>
+        <BookNow />
+      </div>
+    </>
+  );
 };
 
 export default Footer;

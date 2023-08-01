@@ -6,4 +6,4 @@ export { default as Check } from "./Check/check";
 export { default as NoPage } from "./nopage/noPage";
 
 // Kitchen sink to export to app.tsx
-export { default as Kitchen } from "./Kitchen_sink/KitchenSink";
+export { default as Kitchen } from "./kitchen_sink/KitchenSink";

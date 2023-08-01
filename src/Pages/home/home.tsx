@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { CoralIsland, CrystalCaves, HomeImg } from "../../assets";
+import MoreInfo from "../../components/Buttons/MoreInfo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowRight,
@@ -115,9 +116,6 @@ const Home = () => {
 
   const playIconStyle: string = "text-base p-4 mr-6 rounded-full bg-red-700";
 
-  const moreInfoStyle: string =
-    "font-openSan font-bold text-white text-sm border-2 border-white border-solid w-48 h-11 sm:mt-0 mt-6";
-
   return (
     <>
       <div
@@ -157,7 +155,7 @@ const Home = () => {
             </button>
 
             {/* More info button */}
-            <button className={moreInfoStyle}>More Info</button>
+            <MoreInfo />
           </div>
         </div>
       </div>

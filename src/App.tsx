@@ -3,12 +3,12 @@ import { StandardLayout } from "./layouts/index";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 
-const Home = lazy(() => import("./Pages/Home/home"));
-const Plan = lazy(() => import("./Pages/Plan/plan"));
-const Discover = lazy(() => import("./Pages/Discover/discover"));
-const Check = lazy(() => import("./Pages/Check/check"));
+const Home = lazy(() => import("./Pages/home/home"));
+const Plan = lazy(() => import("./Pages/plan/plan"));
+const Discover = lazy(() => import("./Pages/discover/discover"));
+const Check = lazy(() => import("./Pages/check/check"));
 const NoPage = lazy(() => import("./Pages/nopage/noPage"));
-const Kitchen = lazy(() => import("./Pages/Kitchen_sink/KitchenSink"));
+const Kitchen = lazy(() => import("./Pages/kitchen_sink/KitchenSink"));
 
 function App() {
   return (
